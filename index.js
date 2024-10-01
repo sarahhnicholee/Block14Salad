@@ -37,7 +37,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length
 }
 
 /**
@@ -45,7 +45,13 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum=0;
+  for (let i=0; i<numbers.length; i++){
+    sum+=numbers[i]
+    // sum=numbers[i]+sum
+    // reassign the sum variable to its current value plus a number in array
+  }
+    return sum
 }
 
 /**
@@ -53,7 +59,10 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let mean=0;
+  for (let i=0; i<numbers.length; i++){
+    mean+=numbers[i]/5}
+return mean
 }
 
 /**
@@ -61,7 +70,16 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min= numbers[0]
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i]<min){
+      min= numbers[i]
+    }
+    // If true, then we want that to be new value
+      // Check if current num is smaller than value of min variable
+    // if false, skip
+  }
+return min
 }
 
 /**
@@ -69,15 +87,32 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let max= numbers[0]
+  for (let i =0; i <numbers.length; i++){
+    if(numbers[i]>max){
+      max= numbers[i]
 }
+  }
+return max
+}
+
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  let min= numbers[i];
+  let max= numbers[i];
+  for (let i=0; i<numbers.length; i++){
+    if(numbers[i]<min){
+      min=length[i];
+    }
+    if(numbers[i]>max){
+      max=numbers[i]
+    }
+    return max-min
+  }
 }
 
 /**
@@ -85,7 +120,14 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let getEvens= []; 
+  // is this ^^^^ok??? if so, how/why? It doesnt work for others
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i]%2 === 0){
+      getEvens.push(numbers[i]);
+    }
+  }
+  return getEvens
 }
 
 /**
@@ -93,6 +135,12 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let getOdds= []; 
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i]%2 !== 0){
+      getOdds.push(numbers[i]);
+    }
+  }
+  return getOdds
 }
-console.log(This is the line i am adding)
+console.log("This is the line i am adding")
